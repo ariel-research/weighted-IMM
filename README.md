@@ -2,8 +2,8 @@
 </div>
 
 
-# חלוקת קורסים הוגנת ע"י אלגוריתם איטראטיבי למציאת שידוך מקסימלי והתאמת האלגוריתם לשימוש בנקודות זכות
-
+# חלוקת קורסים הוגנת 
+ **אלגוריתם איטראטיבי למציאת שידוך מקסימלי**
 ## דרישות
 python, pip
 
@@ -27,7 +27,8 @@ pip install fairpyx
 
 ## הדגמת שימוש באלגוריתם
 ### יצירת אובייקט
-```
+
+```python
 import fairpyx
 
 
@@ -114,7 +115,8 @@ instance = fairpyx.Instance(
 ```
 
 ### קריאה לפונקציית האלגוריתם
-```
+
+```python
 # Divide using iterated maximum matching algorithm with the data above
 map_agent_name_to_bundle = fairpyx.divide(fairpyx.iterated_maximum_matching, instance=instance)
 
