@@ -27,7 +27,7 @@ pip install fairpyx
 
 ## הדגמת שימוש באלגוריתם
 
-הריצו את הקובץ exxample.py:
+הריצו את הקובץ example.py:
 ```
 python example.py
 ```
