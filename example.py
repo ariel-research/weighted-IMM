@@ -1,6 +1,5 @@
 import fairpyx
 
-
 # Each student's valuations sum to 1000 and each value is between 0 and 1000
 instance = fairpyx.Instance(
     valuations={
@@ -83,7 +82,13 @@ instance = fairpyx.Instance(
 )
 
 # Divide using iterated maximum matching algorithm with the data above
-map_agent_name_to_bundle = fairpyx.divide(fairpyx.iterated_maximum_matching, instance=instance)
+map_agent_name_to_bundle = fairpyx.divide(
+    algorithm=fairpyx.algorithms.iterated_maximum_matching_adjusted, 
+    instance=instance)
 
-# Print the result
-print(fairpyx.stringify(map_agent_name_to_bundle))
+# Print the result:
+print("Result: \n",map_agent_name_to_bundle)
+
+# Print the explanations:
+print("Example explanation: explanation sent to ruti: ...")
+
