@@ -5,21 +5,29 @@
 # חלוקת קורסים הוגנת 
  **אלגוריתם איטראטיבי למציאת שידוך מקסימלי**
 ## דרישות
-python, pip
+`python 3.10+`, `pip`.
 
-## התקנה
+## התקנה והרצה
+```
+git clone https://github.com/ariel-research/weighted-IMM
+```
+
 צרו סביבה וירטואלית:
 ```
+cd weighted-IMM
 python -m venv venv
 ```
 
-הפעילו אותה:
+הפעילו אותה: בלינוקס - 
 ```
 source venv/bin/activate
 ```
+בחלונות - 
+```
+venv/Scripts/activate.bat
+```
 
 התקינו את fairpyx:
-
 ```
 pip install fairpyx
 ```
