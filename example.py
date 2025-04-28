@@ -1,4 +1,5 @@
 import fairpyx
+import logging
 
 # Each student's valuations sum to 1000 and each value is between 0 and 1000
 instance = fairpyx.Instance(
@@ -81,14 +82,23 @@ instance = fairpyx.Instance(
     }
 )
 
+# Explanation logger
+string_explanation_logger = fairpyx.explanations.StringsExplanationLogger(agents=[name for name in instance.agents], language='he')
+
 # Divide using iterated maximum matching algorithm with the data above
 map_agent_name_to_bundle = fairpyx.divide(
     algorithm=fairpyx.algorithms.iterated_maximum_matching_adjusted, 
-    instance=instance)
+    instance=instance,
+    explanation_logger = string_explanation_logger)
 
 # Print the result:
 print("Result: \n",map_agent_name_to_bundle)
 
 # Print the explanations:
-print("Example explanation: explanation sent to ruti: ...")
+print("Example explanation: explanation sent to ruti:\n")
+print(string_explanation_logger.map_agent_to_explanation()['ruti'])
+
+
+
+
 
