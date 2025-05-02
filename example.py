@@ -83,7 +83,8 @@ instance = fairpyx.Instance(
 )
 
 # Explanation logger
-string_explanation_logger = fairpyx.explanations.StringsExplanationLogger(agents=[name for name in instance.agents], language='he')
+string_explanation_logger = fairpyx.explanations.StringsExplanationLogger(
+    agents=[name for name in instance.agents], language='he', level=logging.INFO)
 
 # Divide using iterated maximum matching algorithm with the data above
 map_agent_name_to_bundle = fairpyx.divide(
