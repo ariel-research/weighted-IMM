@@ -96,8 +96,9 @@ map_agent_name_to_bundle = fairpyx.divide(
 print("Result: \n",map_agent_name_to_bundle)
 
 # Print the explanations:
-print("Example explanation: explanation sent to ruti:\n")
-print(string_explanation_logger.map_agent_to_explanation()['ruti'])
+example_student = "sigalit"
+print(f"\nExample explanation: explanation sent to {example_student}:\n")
+print(string_explanation_logger.map_agent_to_explanation()[example_student])
 
 
 
